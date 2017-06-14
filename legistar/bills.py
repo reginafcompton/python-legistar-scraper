@@ -221,6 +221,7 @@ class LegistarAPIBillScraper(LegistarAPIScraper) :
         for matter in self.pages(matters_url,
                                  params=params,
                                  item_key="MatterId"):
+            
             try:
                 legistar_url = self.legislation_detail_url(matter['MatterId'])
             except KeyError:
